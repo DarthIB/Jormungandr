@@ -54,11 +54,12 @@ Team::Application.routes.draw do
   #     resources :products
   #   end
   
-  get 'home' => 'weather#home'  
-  get 'about' => 'weather#about'  
-  get 'contact' => 'weather#contact'  
-  get 'test' => 'development#test'; 
-  post 'search' => 'development#search';
-  get 'weather' => 'weather#weather'
+  get 'home' => 'panic#home'  
+  get 'about' => 'panic#about'  
+  get 'contact' => 'panic#contact'  
+  get 'test' => 'panic#test'; 
+  post 'search' => 'panic#search';
+  get 'weather' => 'panic#weather'
+  get 'earth' => 'panic#earth'
   
 end
