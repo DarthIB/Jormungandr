@@ -1,5 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-
+config.assets.enabled = false
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -8,6 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module Team
   class Application < Rails::Application
+  config.assets.enabled = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
