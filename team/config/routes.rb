@@ -54,7 +54,7 @@ Team::Application.routes.draw do
   #     resources :products
   #   end
   
-  get 'home' => 'panic#home'  
+  get 'main' => 'panic#main'  
   get 'about' => 'panic#about'  
   get 'contact' => 'panic#contact'  
   get 'development' => 'panic#development'; 
