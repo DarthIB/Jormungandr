@@ -1,12 +1,11 @@
-header { 
-text-align:center;
-}
 
 body {
-background: #000000 url('Background.jpg') no-repeat fixed center;
+background: #E1FFFF ;
 }
 
-
+form {
+background: #444444;
+}
 
 div.header {
 	width: 100%;
@@ -40,6 +39,7 @@ text-align:center;
 h2 {
 text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
 color: #CC0000;
+text-align:center;
 }
 p {
 color: #ffffff;

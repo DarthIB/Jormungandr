@@ -1,4 +1,4 @@
-header { 
+header {
 text-align:center;
 }
 
@@ -8,6 +8,8 @@ background: #E1FFFF ;
 
 form {
 background: #444444;
+margin: auto;
+padding: auto;
 }
 
 div.header {
@@ -45,12 +47,7 @@ color: #CC0000;
 text-align:center;
 }
 p {
-color: #ffffff;
-text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+color: #444444;
 text-align:center;
 }
 ul {
@@ -81,4 +78,9 @@ border-color: #000000;
 }
 #nosepass {
 text-align: center;
+}
+
+* {
+	margin:0;
+	padding:0;
 }
