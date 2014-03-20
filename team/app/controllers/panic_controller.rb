@@ -15,6 +15,22 @@ end
 def development
 end
 
+def search
+	@country = params[:key]
+	end 
+
+	def index
+    @country = country.all
+	@letter = params[:letter]
+
+    respond_to do |format|
+      test.html # index.html.erb
+      data.json { render json: @country }
+	  
+    end
+  end
+
+
 def earth
 end
 
