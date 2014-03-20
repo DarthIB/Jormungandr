@@ -1,4 +1,44 @@
 <html>
+<head>
+
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc4qswXAX2nLT2_YptHxe2cWnAuc-pKYA&sensor=true"></script>
+		<script type="text/javascript">
+			function initialize() { 
+				var mapOptions = {
+					center: new google.maps.LatLng(2.8800, 23.6560), 
+					zoom: 8,
+				};
+				var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+   var people = [];
+
+   $.getJSON('data.json', function(data) 
+   {
+       $.each(data.data, function(i, f) 
+	   {
+		
+          var tblRow = "<tr>" + "<td>" + f.awardid + "</td>" +
+           "<td>" + f.award_title + "</td>" + "<td>" + f.award_description + "</td>" + "<td>" + f.start_date + "</td>" + "<td>" + f.end_date + "</td>"  + "<td>" + f.country_operating_unit + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+
+</script>
+</head>
+
 <body>
 <form action="/search" method="post">
 <input name="key" type="input" />
