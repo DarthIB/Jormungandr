@@ -2,11 +2,42 @@
 <head>
   <title>Earthquakes</title>
   <%= stylesheet_link_tag "style.css" %>
-  
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    var ge;
+
+    google.load("earth", "1", {"other_params":"sensor=true_or_false"});
+
+    function init() {
+      google.earth.createInstance('map3d', initCB, failureCB);
+    }
+
+    function initCB(instance) {
+      ge = instance;
+      ge.getWindow().setVisibility(true);
+    
+		var link = ge.createLink('');
+		var href = 'http://earthquake.usgs.gov/' 
+		+ 'earthquakes/feed/v1.0/summary/1.0_week_age_link.kml'
+		link.setHref(href);
+
+		var networkLink = ge.createNetworkLink('');
+		networkLink.set(link, true, false); // Sets the link, refreshVisibility, and flyToView
+
+		ge.getFeatures().appendChild(networkLink);
+	}
+
+    function failureCB(errorCode) {
+    }
+
+    google.setOnLoadCallback(init);
+	
+	
+  </script>
 
 </head>
 <body>
 <h1> THE GROUND TREMBLES WITH EVERY STEP</h1>
-  
+  <div id="map3d" style="height: 400px; width: 600px; position: absolute;"></div>
 </body>
 </html>

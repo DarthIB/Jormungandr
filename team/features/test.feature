@@ -26,3 +26,6 @@ Feature: View weather
 		And I am on the "/weather" page
 		When I click "Twitter"
 		Then I shall see "Twitter"
+	
+
+
