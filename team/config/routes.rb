@@ -57,7 +57,7 @@ Team::Application.routes.draw do
   get 'home' => 'panic#home'  
   get 'about' => 'panic#about'  
   get 'contact' => 'panic#contact'  
-  get 'test' => 'panic#test'; 
+  get 'development' => 'panic#development'; 
   post 'search' => 'panic#search';
   get 'weather' => 'panic#weather'
   get 'earth' => 'panic#earth'
