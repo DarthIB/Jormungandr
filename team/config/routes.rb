@@ -61,5 +61,6 @@ Team::Application.routes.draw do
   post 'search' => 'panic#search';
   get 'weather' => 'panic#weather'
   get 'earth' => 'panic#earth'
+  post 'weather' => 'panic#weather'
   
 end

@@ -11,6 +11,235 @@
 		<script type="text/javascript" src="myscripts.js"></script>
 		<script src="http://openlayers.org/api/2.12/OpenLayers.js"></script>
 		<script src="http://openweathermap.org/js/OWM.OpenLayers.1.3.4.js" ></script>
+		
+		<script>
+			
+			var namer = ""
+			var searched = "<%=@searched%>"
+			var lon = "0.1275"
+			var lat = "51.5072"
+			
+			function weatherfix(data)
+			{
+				if(searched == "")
+				{
+					document.write('<div class="bodyo">Search for a location first</div>')
+				}
+
+				for(var a=0; a < data.Locations.Location.length;a++)
+					{	
+						
+						if(data.Locations.Location[a].name==searched)
+						{
+							namer += data.Locations.Location[a].id
+							lat = data.Locations.Location[a].latitude
+							lon = data.Locations.Location[a].longitude
+						}
+					}
+					
+				var link = 'http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/'
+				link += namer
+				link += '?res=3hourly&key=db83096d-45ea-4527-b4af-8421de7f4370&callback=weatherfix2'
+
+				document.writeln('<p><script type="text/javascript" language="javascript" src="' + link + '"><\/script><p>')
+
+			}		
+			
+			function weatherfix2(data2)
+			{
+				var s = data2.SiteRep.DV.Location.name
+				document.writeln('<div class="headero">' + "Forecast for " + s + "</div>");
+				//Cycles through days
+				for(var i=0; i < data2.SiteRep.DV.Location.Period.length;i++)
+				{	
+						
+					var testt = data2.SiteRep.DV.Location.Period[i].value
+					var myDate = new Date(testt.substr(0,10))
+						
+					switch(myDate.getDay())
+						{
+							case 0:
+								day="Sunday";
+								break;
+							case 1:
+								day="Monday";
+								break;
+							case 2:
+								day="Tuesday";
+								break;
+							case 3:
+								day="Wednesday";
+								break;
+							case 4:
+								day="Thursday";
+								break;
+							case 5:
+								day="Friday";
+								break;
+							case 6:
+								day="Saturday";
+								break;
+						}
+						
+					var weathertable = '<center><table id="weathertableu" border="0"><th colspan="100%">'+ day + '</th>';
+					var weathertable2 = "";
+					var weathertable3 = "";
+					var weathertable4 = "";
+					var weathertable5 = "";
+					
+					
+					//Cycles through all 3 hour intervals
+					for(var j=0; j < data2.SiteRep.DV.Location.Period[i].Rep.length; j++)
+					{		
+						
+						weathertable2 += '<td width="90px">' + data2.SiteRep.DV.Location.Period[i].Rep[j].T + "&deg;C" + '</td>';
+						weathertable3 += '<td width="90px">' + ((data2.SiteRep.DV.Location.Period[i].Rep[j].$)/180)*3 + ':00' + '</td>';
+													
+						lon = data2.SiteRep.DV.Location.lon;
+						lat = data2.SiteRep.DV.Location.lat;
+						
+						var cond = "";
+						var pic = "";
+						var type = data2.SiteRep.DV.Location.Period[i].Rep[j].W;
+						switch(type)
+						{
+							case "0":
+								cond+= "Clear night";
+								pic += "assets/clear.gif";
+								break;
+							case "1":
+								cond+= "Sunny day";
+								pic += "assets/sunny.png";
+								break;
+							case "2":
+								cond+= "Partly cloudy";
+								pic += "assets/partly_cloudy.png";
+								break;
+							case "3":
+								cond+= "Partly cloudy";
+								pic += "assets/partly_cloudy.png";
+								break;
+							case "5":
+								cond+= "Mist";
+								pic += "assets/cloudy.png";
+								break;
+							case "6":
+								cond+= "Fog";
+								pic += "assets/cloudy.png";
+								break;
+							case "7":
+								cond+= "Cloudy";
+								pic += "assets/cloudy.png";
+								break;
+							case "8":
+								cond+= "Overcast";
+								pic += "assets/cloudy.png";
+								break;
+							case "9":
+								cond+= "Light rain";
+								pic += "assets/rain.png";
+								break;
+							case "10":
+								cond+= "Light rain";
+								pic += "assets/rain.png";
+								break;
+							case "11":
+								cond+= "Drizzle";
+								pic += "assets/rain.png";
+								break;
+							case "12":
+								cond+= "Light rain";
+								pic += "assets/rain.png";
+								break;
+							case "13":
+								cond+= "Heavy rain";
+								pic += "assets/rain.png";
+								break;
+							case "14":
+								cond+= "Heavy rain";
+								pic += "assets/rain.png";
+								break;
+							case "15":
+								cond+= "Heavy rain";
+								pic += "assets/rain.png";
+								break;
+							case "16":
+								cond+= "Sleet shower";
+								pic += "assets/rain.png";
+								break;
+							case "17":
+								cond+= "Sleet shower";
+								pic += "assets/rain.png";
+								break;
+							case "18":
+								cond+= "Sleet";
+								pic += "assets/rain.png";
+								break;
+							case "19":
+								cond+= "Hail shower";
+								pic += "assets/rain.png";
+								break;
+							case "20":
+								cond+= "Hail shower";
+								pic += "assets/rain.png";
+								break;
+							case "21":
+								cond+= "Hail";
+								pic += "assets/rain.png";
+								break;
+							case "22":
+								cond+= "Light snow";
+								pic += "assets/snow.gif";
+								break;
+							case "23":
+								cond+= "Light snow";
+								pic += "assets/snow.gif";
+								break;
+							case "24":
+								cond+= "Light snow";
+								pic += "assets/snow.gif";
+								break;
+							case "25":
+								cond+= "Heavy snow shower";
+								pic += "assets/snow.gif";
+								break;
+							case "26":
+								cond+= "Heavy snow shower";
+								pic += "assets/snow.gif";
+								break;
+							case "27":
+								cond+= "Heavy snow";
+								pic += "assets/snow.gif";
+								break;
+							case "28":
+								cond+= "Thunders shower";
+								pic += "assets/thunder.gif";
+								break;
+							case "29":
+								cond+= "Thunders shower";
+								pic += "assets/thunder.gif";
+								break;
+							case "30":
+								cond+= "Thunder";
+								pic += "assets/thunder.gif";
+								break;
+						}
+						
+						weathertable4 += '<td width="90px">' + cond + '</td>';
+						weathertable5 += '<td width="90px"><img src="' + pic + '"></img></td>';
+						
+
+					}
+					
+					var weathertablecomplete = weathertable + '<tr>' + weathertable3 + '</tr>' + '<tr>' + weathertable5 + '</tr>' + '<tr>' + weathertable4 + '</tr>' + '<tr>' + weathertable2 + '</tr>' + '</table></center><br/><br/><br/>'
+					document.writeln(weathertablecomplete);
+					
+
+					
+				}		
+			}
+
+		</script>
 		  
 	</head>
 	<body onload="init()">
@@ -18,8 +247,8 @@
 			<div class="container_12">
 				<div class="topButton"><a href="/main">Home</a></div>
 				<div class="topButton"><a href="/weather">Weather</a></div>
-				<div class="topButton"><a href="/earth">Earthquakes</a></div>
-				<div class="topButton"><a href="/development">U.N.</a></div>
+				<div class="topButton"><a href="/earthquakes">Earthquakes</a></div>
+				<div class="topButton"><a href="/un">U.N.</a></div>
 				<div class="topButton"><a href="/about">About Us</a></div>
 				<div class="topButton"><a href="/contact">Contact Us</a></div>
 			</div>
@@ -57,7 +286,9 @@
 						</div>
 						
 						<div id='3hour' style="display:none">
-
+							<div class="content2">
+								<p><script type="text/javascript" language="javascript" src="http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/sitelist?key=db83096d-45ea-4527-b4af-8421de7f4370&callback=weatherfix"></script></p>
+							</div>
 						</div>
 						
 						<div id='metoffice' style="display:none">
@@ -90,8 +321,6 @@
 	function init() {
 
 	//Maps Center 
-	var lon = "0.1275"
-	var lat = "51.5072"
 
 	var lonlat = new OpenLayers.LonLat(lon, lat);
 	lonlat.transform(

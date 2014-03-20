@@ -4,6 +4,8 @@ def main
 end
 
 def weather
+			@searched = params[:textt]
+			@name = ""
 end
 
 def about
