@@ -10,18 +10,6 @@
 
     function init() {
       google.earth.createInstance('map3d', initCB, failureCB);
-    }<html>
-<head>
-  <title>Earthquakes</title>
-  <%= stylesheet_link_tag "style.css" %>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-    var ge;
-
-    google.load("earth", "1", {"other_params":"sensor=true_or_false"});
-
-    function init() {
-      google.earth.createInstance('map3d', initCB, failureCB);
     }
 
     function initCB(instance) {
@@ -64,35 +52,4 @@ This is an interactive 3D map that updates every 5 minutes, showing all earthqua
 <div id="nosepass"><FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
 </div>
 </body>
-</html>
-
-    function initCB(instance) {
-      ge = instance;
-      ge.getWindow().setVisibility(true);
-    
-		var link = ge.createLink('');
-		var href = 'http://earthquake.usgs.gov/' 
-		+ 'earthquakes/feed/v1.0/summary/1.0_week_age_link.kml'
-		link.setHref(href);
-
-		var networkLink = ge.createNetworkLink('');
-		networkLink.set(link, true, false); // Sets the link, refreshVisibility, and flyToView
-
-		ge.getFeatures().appendChild(networkLink);
-	}
-
-    function failureCB(errorCode) {
-    }
-
-    google.setOnLoadCallback(init);
-	
-	
-  </script>
-
-</head>
-<body>
-<h1> THE GROUND TREMBLES WITH EVERY STEP</h1>
-  <div id="map3d" style="height: 400px; width: 600px; position: absolute;"></div>
-	<div id="feed" style="position: relative; left: 700px; height: 400px;"><a class="twitter-timeline"  href="https://twitter.com/QuakesToday"  data-widget-id="445583302016000000">Tweets by @QuakesToday</a>
-  </body>
 </html>

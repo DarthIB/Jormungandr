@@ -1,0 +1,57 @@
+header { 
+text-align:center;
+}
+
+body {
+background: #000000 url('Background.jpg') no-repeat fixed center;
+}
+h1 {
+text-shadow: 0 0 0.2em #000000, 0 0 0.2em #000000;
+color:#CC0000;
+text-align:center;
+}
+h2 {
+text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
+color: #CC0000;
+}
+p {
+color: #ffffff;
+text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+text-align:center;
+}
+ul {
+text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
+text-align:center;
+}
+a {
+text-shadow: 
+	-1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+.class1 {
+color: #ffffff;
+font-size: 1px;
+}
+#bean {
+border-width: 2px;
+border-color: #000000;
+border-style: solid;
+text-align: left;
+background-color: #ffffff;
+width: 596px;
+position: relative;
+margin-top: 0px;
+}
+#feed {
+border-width: 2px;
+border-color: #000000;
+}
+#nosepass {
+text-align: center;
+}
