@@ -14,4 +14,8 @@ end
 
 def development
 end
+
+def earth
+end
+
 end
