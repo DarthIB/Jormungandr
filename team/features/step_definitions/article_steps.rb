@@ -85,3 +85,23 @@ end
 Then /^the output is all entries for that country$/ do 
 	assert page.has_content? 'Angola'
 end
+
+Then /^I see the linkbar $/ do
+	assert page.has_content? 'U.N.'
+end
+
+Then /^I see the text box $/ do
+ assert page.has_content? 'PANIC'
+end
+
+Then /^I see "Team Jormungandr"$/ do 
+assert page.has_content? 'Team Jormungandr'
+end
+
+Then /^I see "Fredric" $/ do
+assert page.has_content? 'Fredric'
+end
+
+Then /^I see pictures of the team members $/ do |image|
+page.should have_xpath("//img[@src=\"/public/images/#{image}\"]")
+end
