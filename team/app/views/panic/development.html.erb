@@ -2,6 +2,7 @@
 <head>
 
 	<%= stylesheet_link_tag "devstyle.css" %>
+	<%= stylesheet_link_tag "grid.css" %>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc4qswXAX2nLT2_YptHxe2cWnAuc-pKYA&sensor=true"></script>
 		<script type="text/javascript">
 			function initialize() { 
@@ -40,6 +41,16 @@
 </head>
 
 <body>
+<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/weather">Weather</a></div>
+				<div class="topButton"><a href="/earthquakes">Earthquakes</a></div>
+				<div class="topButton"><a href="/un">U.N.</a></div>
+				<div class="topButton"><a href="/about">About Us</a></div>
+				<div class="topButton"><a href="/contact">Contact Us</a></div>
+			</div>
+		</div>
 <form action="/search" method="post">
 <input name="key" type="input" />
 <input value="Enter Country" type="submit" />
