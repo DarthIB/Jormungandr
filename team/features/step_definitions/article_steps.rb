@@ -58,3 +58,30 @@ end
 Then /^I should see the map "(.+)"$/ do |map|
     page.should have_xpath("//img[@src=\"/public/images/#{image}\"]")
 end
+
+
+And /^I visit the "([^\"]*)" page$/ do |urlname|
+	visit urlname
+end
+
+Then /^I can see the data displayed$/ do 
+	assert page.has_content? 'Award Description'
+end
+
+
+Then /^I can scroll through a map$/ do
+	assert page.has_content? 'google maps'
+end
+
+
+And /^the input is "Angola"$/ do 
+	fill_in 'key', with: "Angola" 
+end
+
+When /^I press search$/ do
+	click_button("Enter Country")
+end
+
+Then /^the output is all entries for that country$/ do 
+	assert page.has_content? 'Angola'
+end
