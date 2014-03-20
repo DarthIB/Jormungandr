@@ -5,8 +5,8 @@ Feature: View weather
   
  
 	Scenario: initial tests
-		Given I am in "app\views\weather"
-		And the file "weather.html" exists
+		Given I am in "app\views\panic"
+		And the file "weather.html.erb" exists
 		And I am on the "/weather" page
 		Then I should see "Welcome to the weather section"
 	Scenario: Map page tests
