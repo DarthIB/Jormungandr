@@ -53,4 +53,12 @@ Team::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  get 'home' => 'weather#home'  
+  get 'about' => 'weather#about'  
+  get 'contact' => 'weather#contact'  
+  get 'test' => 'development#test'; 
+  post 'search' => 'development#search';
+  get 'weather' => 'weather#weather'
+  
 end
