@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-
+transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+<title> Contact Us</title>
+<%= stylesheet_link_tag "earthstyle.css" %>
+</head>
+<body>
+	<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/weather">Weather</a></div>
+				<div class="topButton"><a href="/earth">Earthquakes</a></div>
+				<div class="topButton"><a href="/development">U.N.</a></div>
+				<div class="topButton"><a href="/about">About Us</a></div>
+				<div class="topButton"><a href="/contact">Contact Us</a></div>
+			</div>
+		</div>
+<center><form method="post" action="http://homepages.abdn.ac.uk/e.pignotti/pages/post.php" style="width: 500px" >
+<fieldset>
+<legend="Contact Us" />
+<h2>Name:</h2>
+<br />
+<input type="text" name="Name" id="Name" size="30" />
+<br />
+<h2>Email:</h2>
+<br />
+<input type="text" name="email" id="email" size="30" />
+<br />
+<h2>Message</h2>
+<textarea name="message" id="message" rows="6" cols="45">
+Enter your message here
+</textarea>
+<input type="submit" value="Send Message" />
+<input type="reset" value="ABOLISH MITTENS" />
+</fieldset>
+<input type="hidden" name="username" id="username" value="t01fdd13" />
+<input type="hidden" name="webmastermail" id="webmastermail" value="fredric.dahlqvist.09@aberdeen.ac.uk" />
+<input type="hidden" name="homepage" id="homepage" value="http://homepages.abdn.ac.uk/fredric.dahlqvist.09/index.html" />
+</form>
+</center>
+</body>
+</html>
