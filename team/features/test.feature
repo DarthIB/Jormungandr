@@ -27,22 +27,5 @@ Feature: View weather
 		When I click "Twitter"
 		Then I shall see "Twitter"
 	
-Feature: Display the earthquake page correctly
-  In order to see the fully functional website
-  As a person who wants to get good marks
-  I want to see the twitter feed and the map and some text
- 
-	Scenario: Display the twitter feed
-		Given I am in "app\views\quake"
-		And I visit the "earth" page
-		Then I see the twitter feed
-	
-	Scenario: see the 3d map
-		Given I am in "app\views\quake"
-		And I visit the "earth" page
-		Then I see the 3d map 
-	
-	Scenario: Read the text
-		Given I am in "app\views\quake"
-		And I visit the "earth" page
-		Then I see the text under the map
+
+
