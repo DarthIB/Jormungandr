@@ -51,14 +51,17 @@
 				<div class="topButton"><a href="/contact">Contact Us</a></div>
 			</div>
 		</div>
+<div class="search">
 <form action="/search" method="post">
 <%= token_tag %>
-<input name="key" type="input" />
+<input name="key" type="input" size="30" />
 <input value="Enter Country" type="submit" />
 </form>
+</div>
 <div class="wrapper">
 <div class="profile">
    <table id= "userdata" border="2">
+   <div class="UN">
 	<h1>UN Development Programme Data</h1>
   <thead>
             <th>Award Id</th>
