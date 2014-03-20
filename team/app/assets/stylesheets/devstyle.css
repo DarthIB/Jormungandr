@@ -37,7 +37,7 @@ div.header {
 }
 
 body {
-	background-color: #E1FFFF;
+	background-color: #57FEFF;
 }
 
 table {
@@ -45,6 +45,7 @@ table {
 	margin-top: 30px;
 	margin-right: 30px;
 	margin-bottom: 30px;
+	background-color: #ADDFFF;
 	}
 	
 div.search {
