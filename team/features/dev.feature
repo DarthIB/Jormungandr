@@ -9,7 +9,7 @@ Scenario: Display data in tables
 Scenario: Show a map of the areas from the data
 	Given I am in "apps\views\panic"
 	And I visit the "development" page
-	Then I can scroll through a map
+	Then I can scroll through a "map_canvas"
 	
 Scenario: Search for a country
 	Given I am in "apps\views\panic"

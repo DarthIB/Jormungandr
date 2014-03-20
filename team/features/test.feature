@@ -20,7 +20,7 @@ Feature: View weather
 		Then I may see ""
 		And I am on the "/weather" page
 		And is in box "London"
-		When I clack "pushme"
+		When I clIck "pushme"
 		Then I may see ""
 	Scenario: Twitter
 		And I am on the "/weather" page

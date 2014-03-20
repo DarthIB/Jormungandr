@@ -23,7 +23,7 @@ When /^I click "([^"]*)"$/ do |button|
   find_link(button).visible?
 end
 
-When /^I clack "([^"]*)"$/ do |button|
+When /^I clIck "([^"]*)"$/ do |button|
   click_button(button)
 end
 
@@ -47,8 +47,8 @@ Then /^I see the twitter feed$/ do
   page.should have_content 'Tweets by'
  end
 
-Then /^I see the 3d map$/ do
-   assert page.has_content? '3dmap'
+Then /^I see the "([^"]*)"$/ do |one|
+   page.should have_xpath("//div[contains(@id, \"#{one}\")]")
 end
  
 Then /^I see the text under the map$/ do
@@ -69,8 +69,8 @@ Then /^I can see the data displayed$/ do
 end
 
 
-Then /^I can scroll through a map$/ do
-	assert page.has_content? 'google maps'
+Then /^I can scroll through a "([^"]*)"$/ do |two|
+	page.should have_xpath("//div[contains(@id, \"#{two}\")]")
 end
 
 

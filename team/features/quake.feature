@@ -11,7 +11,7 @@ Feature: Display the page correctly
 	Scenario: see the 3d map
 		Given I am in "app\views\panic"
 		And I visit the "earth" page
-		Then I see the 3d map 
+		Then I see the "mapd" 
 	
 	Scenario: Read the text
 		Given I am in "app\views\panic"
