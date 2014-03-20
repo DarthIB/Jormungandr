@@ -1,0 +1,2 @@
+class PanicController < ApplicationController
+end
