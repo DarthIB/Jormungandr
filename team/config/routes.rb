@@ -53,4 +53,9 @@ Team::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+    
+  get 'test' => 'development#test'; 
+  post 'search' => 'development#search';
+  
 end
