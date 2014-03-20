@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Earthquakes</title>
-  <%= stylesheet_link_tag "style.css" %>
+  <%= stylesheet_link_tag "earthstyle.css" %>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script type="text/javascript">
     var ge;
@@ -37,8 +37,18 @@
 
 </head>
 <body>
+<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/weather">Weather</a></div>
+				<div class="topButton"><a href="/earthquakes">Earthquakes</a></div>
+				<div class="topButton"><a href="/un">U.N.</a></div>
+				<div class="topButton"><a href="/about">About Us</a></div>
+				<div class="topButton"><a href="/contact">Contact Us</a></div>
+			</div>
+		</div>
 <h1> THE GROUND TREMBLES WITH EVERY STEP</h1>
-  <div><center><div id="map3d" style="height: 400px; width: 600px; position: absolute;"><p class="class1">test</p></div></center>
+  <div><center><div id="map3d" style="height: 400px; width: 600px; position: absolute;"></div></center>
   <div id="feed" style="position: relative; left: 700px; height: 400px;"><a class="twitter-timeline"  href="https://twitter.com/QuakesToday"  data-widget-id="445583302016000000">Tweets by @QuakesToday</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div></div>
