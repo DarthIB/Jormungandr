@@ -102,6 +102,12 @@ div.grid_12 div.content2 {
 	width: 620px;
 	padding: 15px 10px 15px 10px;
 }
+
+div.grid_8 div.content1 {
+	width: 600px;
+	padding: 15px 10px 15px 10px;
+}
+
 #map {
     width: 100%;
     height: 100%;

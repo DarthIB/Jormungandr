@@ -5,6 +5,13 @@
 	overflow: hidden;
 }
 
+.container_8 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 640px;
+	overflow: hidden;
+}
+
 .grid_1, .grid_2, .grid_4, .grid_8, .grid_10, .grid_12 {
 	margin-left: 10px;
 	margin-right: 10px;

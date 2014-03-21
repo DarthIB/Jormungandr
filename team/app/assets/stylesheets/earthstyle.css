@@ -6,7 +6,11 @@ body {
 background: #000000 url('Background.jpg') no-repeat fixed center;
 }
 
-
+div.map3d {
+height: 400px; 
+width: 600px; 
+position: absolute;
+}
 
 div.header {
 	width: 100%;

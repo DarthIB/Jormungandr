@@ -5,8 +5,17 @@ transitional.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
 <title> Contact Us</title>
-<%= stylesheet_link_tag "contactstyle.css" %>
-<%= stylesheet_link_tag "grid.css" %>
+
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		
+		<script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+		<script src="http://code.jquery.com/ui/1.7.0/jquery-ui.js" ></script>
+
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="contactstyle2.css" />
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="grid2.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="contactstyle.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="grid.css" />
+
 </head>
 <body>
 	<div class="header">
@@ -19,7 +28,12 @@ transitional.dtd">
 				<div class="topButton"><a href="/contact">Contact Us</a></div>
 			</div>
 		</div>
+		
 		<br /><br /><br /><br /><br /><br /><br />
+		
+				<div class="container_12">
+				<div id="mainbox">
+		
 <center><form method="post" action="http://homepages.abdn.ac.uk/e.pignotti/pages/post.php" style="width: 500px" >
 <fieldset>
 <legend="Contact Us" />
@@ -46,5 +60,7 @@ Enter your message here
 <input Type="submit" value="cancel">
 </form>
 </center>
+</div>
+</div>
 </body>
 </html>

@@ -1,6 +1,9 @@
-
 body {
 background: #E1FFFF ;
+}
+
+form {
+background: #444444;
 }
 
 div.header {
@@ -22,7 +25,7 @@ div.topButton {
 	float: left;
 	height: 35px;
 	padding-top: 5px;
-	padding-right: 20px;
+	padding-right: 15px;
 	padding-left: 10px;
 	font-size: 18px;
 	color: #ffffff;
@@ -59,7 +62,7 @@ text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
 text-align:center;
 }
 a {
-color: inherit;
+color: #ffffff;
 text-decoration: none;
 }
 .class1 {

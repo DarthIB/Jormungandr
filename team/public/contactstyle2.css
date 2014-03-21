@@ -1,6 +1,15 @@
+header {
+text-align:center;
+}
 
 body {
 background: #E1FFFF ;
+}
+
+form {
+background: #444444;
+margin: auto;
+padding: auto;
 }
 
 div.header {
@@ -22,19 +31,11 @@ div.topButton {
 	float: left;
 	height: 35px;
 	padding-top: 5px;
-	padding-right: 20px;
+	padding-right: 15px;
 	padding-left: 10px;
 	font-size: 18px;
 	color: #ffffff;
 }
-
-#mainbox {
-
-	width: 550px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 h1 {
 text-shadow: 0 0 0.2em #000000, 0 0 0.2em #000000;
 color:#CC0000;
@@ -46,12 +47,7 @@ color: #CC0000;
 text-align:center;
 }
 p {
-color: #ffffff;
-text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+color: #444444;
 text-align:center;
 }
 ul {
@@ -59,7 +55,7 @@ text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
 text-align:center;
 }
 a {
-color: inherit;
+color: #ffffff;
 text-decoration: none;
 }
 .class1 {
