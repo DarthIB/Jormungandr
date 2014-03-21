@@ -102,8 +102,8 @@ Then /^I see names$/ do
 	assert page.has_content? 'Fredric'
 end
 
-Then /^I see pictures of the team members$/ do |image|
-	page.should have_xpath("//img[@src=\"/public/images/#{image}\"]")
+Then /^I see pictures of the team members$/ do
+	page.should have_xpath("//img[@src=\"/assets/Fredric.jpg\"]")
 end
 
 Then /^I can see the message box displayed$/ do
@@ -111,7 +111,7 @@ Then /^I can see the message box displayed$/ do
 end
 
 Then /^I can edit the boxes$/ do
-	fill_in 'Message', with: "I love you guys"
+	fill_in 'message', with: "I love you guys"
 end
 
 And /^I press Send message$/ do
