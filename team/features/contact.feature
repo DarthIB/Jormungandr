@@ -1,7 +1,7 @@
 Feature: Allow users to contact us
 Allow users put in their information
 Let the page display all features
-Let information be submitted
+Let information be submittted
 
 	Scenario: Load the page
 	Given I am in "app\views\panic"
