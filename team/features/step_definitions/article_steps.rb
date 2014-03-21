@@ -114,14 +114,6 @@ Then /^I can edit the boxes$/ do
 	fill_in 'message', with: "I love you guys"
 end
 
-And /^I press Send message$/ do
-	click_button("Send Message")
-end
-
-Then /^I can submit my information$/ do
-	dont know how to phrase this
-end
-
 And /^I press cancel$/ do
 	click_button("cancel")
 end

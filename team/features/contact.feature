@@ -14,12 +14,6 @@ Let information be submitted
 		And I am on the "contact" page	
 		Then I can edit the boxes
 
-	Scenario: Submit the information
-		Given I am in "app\views\panic"
-		And I am on the "contact" page
-		And I press Send message
-		Then I can submit my information
-
 	Scenario: Cancelling a submission
 		Given I am in "app\views\panic"
 		And I am on the "contact" page
