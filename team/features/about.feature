@@ -6,12 +6,12 @@ Feature: Showcase the team
 	Scenario: Display the Team description
 		Given I I am in "app\views\panic"
 		And I visit the "about" page
-		Then I see "Team Jormungandr"
+		Then I see team info
 		
 	Scenario: Display the crew
 		Given I I am in "app\views\panic"
 		And I visit the "about" page
-		Then I see "Fredric"
+		Then I see names
 		
 	Scenario: Display pictures
 		Given I I am in "app\views\panic"
