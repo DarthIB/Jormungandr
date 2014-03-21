@@ -54,3 +54,4 @@ group :test do
 end
 
 gem 'bcrypt', :require => 'bcrypt'
+gem 'heroku'
