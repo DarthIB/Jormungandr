@@ -34,6 +34,13 @@
 					</p>
 
 					<%= submit_tag "log in"%></center>
+					<br/>
+					<center>
+					<%flash.each do |name,msg|%>
+						<%=content_tag :div,msg,:id=>"flash#{name}"%>
+					<%end%>
+					</center>
+					
 				</div>
 			</div>
 		</div>

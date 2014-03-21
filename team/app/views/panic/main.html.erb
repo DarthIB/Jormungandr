@@ -5,7 +5,7 @@ transitional.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
 <title>Home</title>
-<%= stylesheet_link_tag "mainstyle.css" %>
+<%= stylesheet_link_tag "home.css" %>
 <%= stylesheet_link_tag "grid.css" %>
 </head>
 <body>
@@ -25,7 +25,19 @@ transitional.dtd">
 		<br />
 		<p>Here you will find all the information you will ever need about Weather, Earthquakes, and UN development projects. <br />
 		Click any of the links in the header to start your adventure!</p>
-		
+		<br/>
+		<center>
+		<form action="/log_in">
+			<input type="submit" value="Login"/>
+		</form>
+		<form action="/sign_up">
+			<input type="submit" value="Sign Up"/>
+		</form>
+		<form action="/my_account">
+			<input type="submit" value="My Account"/>
+		</form>
+		</center>
+
 		<br /><br /><br /><br /><br />
 </body>
 </html>

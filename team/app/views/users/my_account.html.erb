@@ -23,15 +23,27 @@
 
 					<!-- app/views/users/my_account.html.erb -->
 					<br/><div class="headero">Account Info</div>
-										
-					<p>Your username is <%= @sessName %>
-	
+					
+					<div class="bodyo">					
+					
+					<p>Your username is <strong><%= @sessName %></strong>
+					<br/><br/>
+					<% if @authed == 1%>
+					<center>
+					<u><p>List of website users</p></u><br/>
 					<% @test.each do |cat| %>
 						<p><%= cat.email %></p>
 					<%end%>
+					<%end%>
+					</center>
 
-					<br>
-					<a href="log_out">Log out</a>
+					<br/>
+					<center>
+					<form action="/log_out">
+						<input type="submit" value="Log out"/>
+					</form>
+					</center>
+					</div>
 				</div>
 			</div>
 		<div>

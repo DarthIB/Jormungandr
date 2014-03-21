@@ -40,9 +40,15 @@ class UsersController < ApplicationController
   def my_account
      
       if session[:user_id] != nil
-     
+			
+		 @authed = 0
          @sessName = User.find(session[:user_id]).email
-		 @test = User.all
+		 
+		 
+		 if @sessName == "admin"
+			@authed = 1
+			@test = User.all
+		end
      
       else
       
