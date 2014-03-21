@@ -1,13 +1,41 @@
-<!-- app/views/users/login.html.erb -->
-<h1>Log in</h1>
-<%= form_tag :action => 'process_login' %>
-<p>
-<%= label_tag :email %><br />
-<%= text_field_tag :email, params[:email] %>
-</p>
-<p>
-<%= label_tag :password %><br />
-<%= password_field_tag :password %>
-</p>
+<html>
+	<head>
+		<%= stylesheet_link_tag "style1.css" %>
+		<%= stylesheet_link_tag "grid.css" %>
+	</head>
+	
+	<body>
+	
+		<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/weather">Weather</a></div>
+				<div class="topButton"><a href="/earth">Earthquakes</a></div>
+				<div class="topButton"><a href="/development">U.N.</a></div>
+				<div class="topButton"><a href="/about">About Us</a></div>
+				<div class="topButton"><a href="/contact">Contact Us</a></div>
+			</div>
+		</div>
+		
+		<div class="container_8 main">
+			<div class="grid_8">
+				<div class="content1">
+		
+					<!-- app/views/users/login.html.erb -->
+					<br/><div class="headero">Log in</div>
+					<%= form_tag :action => 'process_login' %>
+					<center><p>
+					<%= label_tag :email %><br />
+					<%= text_field_tag :email, params[:email] %>
+					</p>
+					<p>
+					<%= label_tag :password %><br />
+					<%= password_field_tag :password %>
+					</p>
 
-<%= submit_tag "log in"%>
+					<%= submit_tag "log in"%></center>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

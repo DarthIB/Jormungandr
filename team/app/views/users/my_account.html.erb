@@ -1,11 +1,39 @@
-<!-- app/views/users/my_account.html.erb -->
-<h1>Account Info</h1>
+<html>
+	<head>
+		<%= stylesheet_link_tag "style1.css" %>
+		<%= stylesheet_link_tag "grid.css" %>
+	</head>
+	
+	<body>
+	
+		<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/weather">Weather</a></div>
+				<div class="topButton"><a href="/earth">Earthquakes</a></div>
+				<div class="topButton"><a href="/development">U.N.</a></div>
+				<div class="topButton"><a href="/about">About Us</a></div>
+				<div class="topButton"><a href="/contact">Contact Us</a></div>
+			</div>
+		</div>
+		
+		<div class="container_8 main">
+			<div class="grid_8">
+				<div class="content1">
 
-<p>Your username is <%= @sessName %>
+					<!-- app/views/users/my_account.html.erb -->
+					<br/><div class="headero">Account Info</div>
+										
+					<p>Your username is <%= @sessName %>
+	
+					<% @test.each do |cat| %>
+						<p><%= cat.email %></p>
+					<%end%>
 
-<% @test.each do |cat| %>
-	<p><%= cat.email %></p>
-<%end%>
-
-<br>
-<a href="log_out">Log out</a>
+					<br>
+					<a href="log_out">Log out</a>
+				</div>
+			</div>
+		<div>
+	</body>
+</html>

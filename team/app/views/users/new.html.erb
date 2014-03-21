@@ -1,52 +1,75 @@
-<!-- /app/views/users/new.html.erb -->
-<h1>Sign Up</h1>  
+<html>
+	<head>
+		<%= stylesheet_link_tag "style1.css" %>
+		<%= stylesheet_link_tag "grid.css" %>
+	</head>
+	
+	<body>
+	
+		<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/weather">Weather</a></div>
+				<div class="topButton"><a href="/earth">Earthquakes</a></div>
+				<div class="topButton"><a href="/development">U.N.</a></div>
+				<div class="topButton"><a href="/about">About Us</a></div>
+				<div class="topButton"><a href="/contact">Contact Us</a></div>
+			</div>
+		</div>
+		
+		<div class="container_8 main">
+			<div class="grid_8">
+				<div class="content1">
+					<!-- /app/views/users/new.html.erb -->
+					<br/><div class="headero">Sign Up</div>
+					<center>
+					<%= form_for @user do |f| %>  
 
-  <%= form_for @user do |f| %>  
+					<% if @user.errors.any? %>  
 
-  <% if @user.errors.any? %>  
+					<div class="error_messages">  
+						<h2>Form is invalid</h2>  
+						<ul>  
+							<% for message in @user.errors.full_messages %>  
+							<li><%= message %></li>  
+							<% end %>  
+						</ul>  
+					</div>  
 
-    <div class="error_messages">  
+					<% end %>  
 
-      <h2>Form is invalid</h2>  
+					<p>  
 
-      <ul>  
+					<%= f.label :email %><br />  
+		
+					<%= f.text_field :email %>  
 
-        <% for message in @user.errors.full_messages %>  
+					</p>  
 
-          <li><%= message %></li>  
+					<p>  
 
-        <% end %>  
+					<%= f.label :password %><br />  
 
-      </ul>  
+					<%= f.password_field :password %>  
 
-    </div>  
+				</p>  
 
-  <% end %>  
+				<p>  
 
-  <p>  
+					<%= f.label :password_confirmation %><br/>  
 
-    <%= f.label :email %><br />  
+					<%= f.password_field :password_confirmation %>  
 
-    <%= f.text_field :email %>  
+				</p>  
 
-  </p>  
+				<p class="button"><%= f.submit %></p>  
 
-  <p>  
+			<% end %>  
+			</center>
 
-    <%= f.label :password %><br />  
+			</div>
+		</div>
+</div>
 
-    <%= f.password_field :password %>  
-
-  </p>  
-
-  <p>  
-
-    <%= f.label :password_confirmation %>  
-
-    <%= f.password_field :password_confirmation %>  
-
-  </p>  
-
-  <p class="button"><%= f.submit %></p>  
-
-<% end %>  
+</body>
+</html>
