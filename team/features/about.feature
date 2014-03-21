@@ -4,16 +4,16 @@ Feature: Showcase the team
 	I want to know about the team and its members
 	
 	Scenario: Display the Team description
-		Given I I am in "app\views\panic"
+		Given I am in "app\views\panic"
 		And I visit the "about" page
-		Then I see "Team Jormungandr"
+		Then I see Team Info
 		
 	Scenario: Display the crew
-		Given I I am in "app\views\panic"
+		Given I am in "app\views\panic"
 		And I visit the "about" page
-		Then I see "Fredric"
+		Then I see names
 		
 	Scenario: Display pictures
-		Given I I am in "app\views\panic"
+		Given I am in "app\views\panic"
 		And I visit the "about" page
 		Then I see pictures of the team members

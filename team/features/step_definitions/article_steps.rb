@@ -86,22 +86,46 @@ Then /^the output is all entries for that country$/ do
 	assert page.has_content? 'Angola'
 end
 
-Then /^I see the linkbar $/ do
+Then /^I see the linkbar$/ do
 	assert page.has_content? 'U.N.'
 end
 
-Then /^I see the text box $/ do
- assert page.has_content? 'PANIC'
+Then /^I see the text box$/ do
+	assert page.has_content? 'PANIC'
 end
 
-Then /^I see "Team Jormungandr"$/ do 
-assert page.has_content? 'Team Jormungandr'
+Then /^I see Team Info$/ do 
+	assert page.has_content? 'Team Jormungandr'
 end
 
-Then /^I see "Fredric" $/ do
-assert page.has_content? 'Fredric'
+Then /^I see names$/ do
+	assert page.has_content? 'Fredric'
 end
 
-Then /^I see pictures of the team members $/ do |image|
-page.should have_xpath("//img[@src=\"/public/images/#{image}\"]")
+Then /^I see pictures of the team members$/ do |image|
+	page.should have_xpath("//img[@src=\"/public/images/#{image}\"]")
+end
+
+Then /^I can see the contact form displayed$/ do
+	assert page.has_content? 'Message'
+end
+
+Then /^I can edit the boxes$/ do
+	fill_in 'message', with: "You guys are amazing"
+end
+
+And /^I press Send Message$/ do
+	click_button("Send Message")
+end
+
+Then /^I can submit my information$/ do
+	visit 'http://homepages.abdn.ac.uk/e.pignotti/pages/post.php'
+end
+
+And /^I press cancel$/ do
+	click_button("Cancel")
+end
+
+Then /^I will be diverted to the Home page$/ do
+	visit '/main'
 end
