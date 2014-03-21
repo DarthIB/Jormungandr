@@ -25,7 +25,7 @@ body {
 
 
 div.header {
-	width: 600px;
+	width: 640px;
 	height: 50px;
 	color: #ffffff;
 	background-color: #000000;
@@ -46,7 +46,7 @@ div.topButton {
 	padding-right: 20px;
 	padding-left: 10px;
 	font-size: 18px;
-	color: red;
+	color: #ffffff;
 }
 
 div.sideButton {
@@ -83,7 +83,7 @@ div.content1 {
 div.content2 {
 	margin-top: 15px;
 	margin-bottom: 15px;
-	height: 1200px;
+	height: 1250px;
 	background-color: #ffffff;
 	position: relative;
 	border-radius: 15px;
@@ -99,7 +99,7 @@ div.content3{
 }
 
 div.grid_12 div.content2 {
-	width: 600px;
+	width: 620px;
 	padding: 15px 10px 15px 10px;
 }
 #map {

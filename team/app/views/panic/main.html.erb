@@ -5,8 +5,17 @@ transitional.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
 <title>Home</title>
-<%= stylesheet_link_tag "home.css" %>
-<%= stylesheet_link_tag "grid.css" %>
+		
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		
+		<script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+		<script src="http://code.jquery.com/ui/1.7.0/jquery-ui.js" ></script>
+
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="home2.css" />
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="grid2.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="home.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="grid.css" />
+
 </head>
 <body>
 	<div class="header">
@@ -20,13 +29,15 @@ transitional.dtd">
 			</div>
 		</div>
 		<br /><br />
+		<center>
+		<div id="mainbox">
 		<p>Hello, and welcome to</p>
 		<h1>PANIC! at the website</h1>
 		<br />
 		<p>Here you will find all the information you will ever need about Weather, Earthquakes, and UN development projects. <br />
 		Click any of the links in the header to start your adventure!</p>
 		<br/>
-		<center>
+		
 		<form action="/log_in">
 			<input type="submit" value="Login"/>
 		</form>
@@ -36,6 +47,7 @@ transitional.dtd">
 		<form action="/my_account">
 			<input type="submit" value="My Account"/>
 		</form>
+		</div>
 		</center>
 
 		<br /><br /><br /><br /><br />
